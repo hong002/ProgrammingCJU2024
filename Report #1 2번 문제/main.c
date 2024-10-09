@@ -17,7 +17,7 @@ int main(void)
 
 	out_money = input_money - price;                                   // input_money - price의 결과값을 out_money에 저장
 
-	printf("거스름돈 : %d\n", out_money);                              // %d 위치에 거스름돈(out_money)를 출력
+	printf("거스름돈 : %d원\n", out_money);                              // %d 위치에 거스름돈(out_money)를 출력
 
 	int paper_money1000 = out_money / 1000;                            // 거스름돈 1000원의 갯수를 paper_money1000이라 하고, out_money / 1000의 결과값을 paper_money1000에 저장
 	out_money = out_money % 1000;                                      // 나머지를 구하기 위해 out_money % 1000를 하고, 결과값을 out_money에 저장
