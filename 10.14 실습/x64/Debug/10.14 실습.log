@@ -1,9 +1,0 @@
-﻿  소스.cpp
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(15,10): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(15,10): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 0개가 제공되었습니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(15,10): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(21,10): error C2059: 구문 오류: '!'
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(22,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(26,10): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(26,10): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 0개가 제공되었습니다.
-C:\Users\ansys22\Documents\GitHub\ProgrammingCJU2024\10.14 실습\소스.cpp(26,10): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
