@@ -12,21 +12,23 @@ int main(void)
 	printf("사칙연산 입력(정수) :\n");
 	scanf_s("%d %d", &b, &c);
 
-	if (a == 1)
+	switch (a)
 	{
+	case 1:
 		printf("결과값 : %d\n", b + c);
-	}
-	else if (a == 2)
-	{
+		break;
+
+	case 2:
 		printf("결과값 : %d\n", b - c);
-	}
-	else if (a == 3)
-	{
+		break;
+
+	case 3:
 		printf("결과값 : %d\n", b * c);
-	}
-	else if (a == 4)
-	{
+		break;
+
+	default:
 		printf("결과값 : %d\n", b / c);
+		break;
 	}
 
 	return 0;
