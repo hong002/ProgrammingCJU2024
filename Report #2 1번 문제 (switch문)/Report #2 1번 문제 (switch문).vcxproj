@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6111a467-7a0a-4ef6-b1d2-8220f376a875}</ProjectGuid>
-    <RootNamespace>Report21번문제</RootNamespace>
+    <ProjectGuid>{f997e79a-7a1d-4456-a105-58ba135f0ac6}</ProjectGuid>
+    <RootNamespace>Report21번문제switch문</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Report#2 1번 문제 (if문)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
