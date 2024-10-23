@@ -22,7 +22,7 @@ int main(void)
 	Result2 = Number1 * Number2 / Result1;                                    // 두 숫자를 곱한 값을 최대공약수로 나누어 최소공배수를 구한다
 
 	printf(" %d과 %d의 최대공약수는 %d이다.\n", Number1, Number2, Result1);
-	printf(" %d과 %d의 최대공약수는 %d이다.\n", Number1, Number2, Result2);
+	printf(" %d과 %d의 최소공배수는 %d이다.\n", Number1, Number2, Result2);
 
 	return 0;
 }
