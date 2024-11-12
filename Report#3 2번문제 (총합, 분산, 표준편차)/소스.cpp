@@ -44,7 +44,7 @@ int main(void)
     // infinite loop
     for (int i = 0; i < NUM_RANDOM; i++)
     {
-        // generating the random number, Flip Coin, 0: Fwd, 1: Bwd
+        // generating the random number
         nNumRandom = GenRandNumRandom(MIN_RANGE, MAX_RANGE);
         printf(" %d ", nNumRandom);
 
