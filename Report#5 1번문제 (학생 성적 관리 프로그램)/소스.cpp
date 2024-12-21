@@ -25,9 +25,9 @@ typedef struct
 void Load_Students(FILE* File, Student Students[], int* Student_Count);
 void Calculate_Average(Student Students[], int Student_Count);
 void Calculate_Rank(Student Students[], int Student_Count);
-void Calculate_All_Rank(Student Students[], int Student_Count);
+void Calculate_All_Rank(Student Students1[], int Count1, Student Students2[], int Count2);
 void Save_Result(const char* FileName, Student Students[], int Student_Count);
-void Save_Class_Summary(const char* fileName, Student students1[], int nCount1, Student students2[], int nCount2);
+void Save_Class_Summary(const char* FileName, Student Students1[], int Student_Count1, Student Students2[], int Student_Count2);
 
 // 학생 정보를 읽어오는 함수
 void Load_Students(FILE* File, Student Students[], int* Student_Count) 
@@ -75,19 +75,40 @@ void Calculate_Rank(Student Students[], int Student_Count)
 }
 
 // 전체 등수를 계산하는 함수
-void Calculate_All_Rank(Student Students[], int Student_Count)
+void Calculate_All_Rank(Student Students1[], int Student_Count1, Student Students2[], int Student_Count2)
 {
-    for (int i = 0; i < Student_Count; i++)
+    Student All_Students[200];                  // 두 분반의 학생을 저장할 배열
+    int Total_Count = Student_Count1 + Student_Count2;
+
+    // 두 분반의 학생들을 합친다
+    for (int i = 0; i < Student_Count1; i++)
+    {
+        All_Students[i] = Students1[i];
+    }
+    for (int i = 0; i < Student_Count2; i++)
+    {
+        All_Students[Student_Count1 + i] = Students2[i];
+    }
+
+    // 전체 등수를 계산
+    for (int i = 0; i < Total_Count; i++)
     {
         int Rank = 1;
-        for (int j = 0; j < Student_Count; j++)
+        for (int j = 0; j < Total_Count; j++)
         {
-            if (Students[j].Average_Scores > Students[i].Average_Scores)
+            if (All_Students[j].Average_Scores > All_Students[i].Average_Scores)
             {
                 Rank++;
             }
         }
-        Students[i].Student_All_Rank = Rank;
+        if (i < Student_Count1)
+        {
+            Students1[i].Student_All_Rank = Rank;                    // 분반 1의 전체 등수
+        }
+        else
+        {
+            Students2[i - Student_Count1].Student_All_Rank = Rank;   // 분반 2의 전체 등수
+        }
     }
 }
 
@@ -177,6 +198,7 @@ int main(void)
     Calculate_Average(Student_Class2, Student_Count2);
     Calculate_Rank(Student_Class1, Student_Count1);
     Calculate_Rank(Student_Class2, Student_Count2);
+    Calculate_All_Rank(Student_Class1, Student_Count1, Student_Class2, Student_Count2);
 
     // 파일 저장
     Save_Result("students_1_results.txt", Student_Class1, Student_Count1);
